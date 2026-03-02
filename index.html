@@ -2,16 +2,137 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Basic Project</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Bay Hotel | Modern Coastal Escape</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Say Hello</h1>
+    <header class="header" id="home">
+      <nav class="nav container">
+        <a href="#home" class="logo">Azure Bay</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#booking">Booking</a></li>
+        </ul>
+      </nav>
 
-    <input id="nameInput" type="text" placeholder="Type your name..." />
-    <button id="helloBtn">Greet Me</button>
+      <section class="hero container">
+        <div class="hero-content">
+          <p class="kicker">Luxury · Comfort · Ocean Views</p>
+          <h1>Stay in style at Azure Bay Hotel</h1>
+          <p>
+            Discover modern rooms, warm hospitality, and unforgettable coastal
+            sunsets—all in one perfect destination.
+          </p>
+          <a href="#booking" class="btn">Book Your Stay</a>
+        </div>
+      </section>
+    </header>
 
-    <p id="output"></p>
+    <main>
+      <section class="about section container" id="about">
+        <div>
+          <h2>About Us</h2>
+          <p>
+            Azure Bay Hotel blends contemporary design with relaxed seaside
+            charm. Located minutes from the waterfront, we offer premium
+            comfort, curated experiences, and personalized service for every
+            guest.
+          </p>
+        </div>
+        <div class="about-cards">
+          <article class="card">
+            <h3>Prime Location</h3>
+            <p>Located in the heart of the bay with easy access to local attractions.</p>
+          </article>
+          <article class="card">
+            <h3>Exceptional Service</h3>
+            <p>Our team is available 24/7 to ensure your stay is seamless and memorable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="rooms section" id="rooms">
+        <div class="container">
+          <h2>Our Rooms</h2>
+          <div class="room-grid">
+            <article class="room-card">
+              <h3>Deluxe Room</h3>
+              <p>Cozy interiors, king bed, and city skyline views.</p>
+              <span>$129/night</span>
+            </article>
+            <article class="room-card">
+              <h3>Ocean Suite</h3>
+              <p>Spacious suite with a private balcony facing the sea.</p>
+              <span>$199/night</span>
+            </article>
+            <article class="room-card">
+              <h3>Presidential Suite</h3>
+              <p>Premium living space with luxury amenities and lounge area.</p>
+              <span>$329/night</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="amenities section container" id="amenities">
+        <h2>Amenities</h2>
+        <ul class="amenity-list">
+          <li>Infinity pool & spa</li>
+          <li>Complimentary high-speed Wi-Fi</li>
+          <li>Fitness center</li>
+          <li>Rooftop restaurant & bar</li>
+          <li>Airport shuttle service</li>
+          <li>24/7 concierge desk</li>
+        </ul>
+      </section>
+
+      <section class="booking section" id="booking">
+        <div class="container booking-wrap">
+          <h2>Book Your Stay</h2>
+          <form id="bookingForm" class="booking-form">
+            <label>
+              Full Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Check-In
+              <input type="date" name="checkin" required />
+            </label>
+            <label>
+              Check-Out
+              <input type="date" name="checkout" required />
+            </label>
+            <label>
+              Guests
+              <select name="guests" required>
+                <option value="">Select guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4+ Guests</option>
+              </select>
+            </label>
+            <button type="submit" class="btn">Submit Booking Request</button>
+          </form>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Azure Bay Hotel. All rights reserved.</p>
+        <a href="#home" class="back-top">Back to top ↑</a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
